@@ -29,12 +29,10 @@
       </ul>
     </nav>
     <main>
-      <div class="flash-message notice">投稿に成功しました。</div>
-      <div>
-        <%= flash.each do |message_type, message| %>
+      <% flash.each do |message_type, message| %>
           <div class="flash-message <%= message_type %>"><%= message %></div>
-        <% end %>
-      </div>
+          
+      <% end %>
       <%= yield %>
     </main>
     
